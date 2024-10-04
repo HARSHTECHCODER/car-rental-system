@@ -1,0 +1,106 @@
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #101010;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+/* @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    } */
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #printSection,
+    #printSection * {
+        visibility: visible;
+    }
+
+    #printSection {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+body{
+    background: rgb(83,99,95);
+    background: linear-gradient(90deg, rgba(83,99,95,1) 0%, rgba(9,121,116,1) 22%, rgba(0,212,255,1) 60%);
+}
+
+/* Make the navbar black with white anchor tag styles */
+.navbar {
+    background-color: black !important;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: white !important;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for anchor tags with red color */
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: red !important;
+}
+
+/* Align all items to the right side in a single row */
+.navbar .navbar-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure navbar-toggler button is also styled for mobile view */
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-brand{
+    font-size : 40px;
+}
+
+.collapse{
+    margin-right: 100px;
+    margin-left: 500px;
+    display: flex;
+    align-items: center;
+    gap: 500px;
+}
+

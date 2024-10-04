@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <title>{% block title %}{% endblock title %} Harsh Rental</title>
+    
+    {%load static%}
+<link rel="stylesheet" href="{%static 'style.css'%}">
+{%block style%}{%endblock style%}
+    </style>
+  </head>
+  
+  <body style="background-color:aliceblue">
+    <div id="nonPrintable">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between">
+
+        <div>
+          <a class="navbar-brand" href="#">Harsh Rental</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+            {%if user.is_authenticated%}
+            <li class="nav-item active">
+              <a class="nav-link" href="/vehicles">Vehicles</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/signout">Log Out</a>
+            </li>
+
+            {%else%}
+            <li class="nav-item active">
+              <a class="nav-link" href="/signin">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            {% endif %}
+            
+          </ul>
+
+        </div>
+    </nav>
+    {% block body %} {% endblock body %}
+     
+<footer class="page-footer-text-center font-small blue mx-5" >
+
+  
+  <div class="footer-copyright text-center py-3">© 2022 Copyright: harsh
+  </div>
+ 
+
+</footer>
+
+</div>
+    </body>
+</html>
